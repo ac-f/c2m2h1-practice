@@ -13,13 +13,11 @@ public abstract class Search<T> implements SearchStrategy<T> {
     return result;
   }
 
-  protected T defaultResult() {
-    return null;
-  }
+  //無預設行為
+  protected abstract T defaultResult();
+  //有預設行為
   protected boolean condition(T result, String str) {
     return false;
   }
-  protected T operation(String str) {
-    return null;
-  }
+  protected abstract T operation(String str);
 }
